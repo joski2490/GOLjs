@@ -4,7 +4,7 @@ const live = "#000000";
 const dead = "#AAAAAA";
 
 var slider = document.getElementById("delay")
-var delay = 50; // Delay between generations in milliseconds
+var delay = 10; // Delay between generations in milliseconds
 
 
 var board = new Array(y);
@@ -63,8 +63,8 @@ function checkPosition(yPos, xPos){
 	if (xPos > 0){
 		if(yPos > 0){
 			numAdj += board[xPos - 1][yPos - 1];
-		}
-		numAdj += board[xPos - 1][yPos] + board[xPos - 1][yPos + 1];
+		}                                          // -1
+		numAdj += board[xPos - 1][yPos] + board[xPos - 2][yPos + 1];
 	}
 	
 	if(yPos > 0){
