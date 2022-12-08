@@ -137,7 +137,7 @@ board[25][7] = 1;
 board[35][3] = 1;
 board[35][4] = 1;
 board[36][3] = 1;
-board[36][4] = 1;
+board[36][4] = 2;//36-4-1
 
 //console.log(changes);
 draw();
