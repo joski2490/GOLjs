@@ -133,11 +133,11 @@ board[23][6] = 1;
 board[25][1] = 1;
 board[25][2] = 1;
 board[25][6] = 1;
-board[25][7] = 1;
+board[24][7] = 1;//25-7-1
 board[35][3] = 1;
 board[35][4] = 1;
-board[36][3] = 1;
-board[36][4] = 2;//36-4-1
+board[35][7] = 1;//36-3-1
+board[35][5] = 1;//36-4-1
 
 //console.log(changes);
 draw();
