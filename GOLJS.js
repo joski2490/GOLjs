@@ -4,7 +4,7 @@ const live = "#000000";
 const dead = "#AAAAAA";
 
 var slider = document.getElementById("delay")
-var delay = 10; // Delay between generations in milliseconds
+var delay = 50; // Delay between generations in milliseconds
 
 
 var board = new Array(y);
@@ -64,7 +64,7 @@ function checkPosition(yPos, xPos){
 		if(yPos > 0){
 			numAdj += board[xPos - 1][yPos - 1];
 		}                                          // -1
-		numAdj += board[xPos - 1][yPos] + board[xPos - 2][yPos + 1];
+		numAdj += board[xPos - 1][yPos] + board[xPos - 1][yPos + 1];
 	}
 	
 	if(yPos > 0){
@@ -102,6 +102,7 @@ function processStep(){
 
 draw();
 
+board[1][4] = 1;
 board[1][5] = 1;
 board[1][6] = 1;
 board[2][5] = 1;
@@ -133,11 +134,13 @@ board[23][6] = 1;
 board[25][1] = 1;
 board[25][2] = 1;
 board[25][6] = 1;
-board[24][7] = 1;//25-7-1
+board[25][7] = 1;//25-7-1
 board[35][3] = 1;
 board[35][4] = 1;
-board[35][7] = 1;//36-3-1
-board[35][5] = 1;//36-4-1
+board[36][3] = 1;//36-3-1
+board[36][4] = 1;//36-4-1
+board[37][5] = 1;
+board[37][6] = 1;
 
 //console.log(changes);
 draw();
